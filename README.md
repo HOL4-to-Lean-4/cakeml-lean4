@@ -27,3 +27,9 @@ migration runs on a local machine.
 | `runs/<batch>/` | Transcripts, findings and reports per batch |
 | `ledger/costs.csv` | Tokens, money and time for every model call |
 | `plan/` | The study plan, in LaTeX |
+
+## License
+
+BSD 3-Clause (see `LICENSE`). The Lean code here is translated from CakeML's HOL4 sources,
+which are BSD 3-Clause licensed by the CakeML developers; vendored upstream code in `vendor/`
+keeps its own license files.

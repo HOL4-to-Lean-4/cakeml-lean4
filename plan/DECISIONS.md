@@ -14,5 +14,17 @@ The author's words: "whole migration: translate once with Sonnet and once with O
    Its settings are in the cloud environment "Default" only (see `candle-hol4-lean4-study/CLOUD.md`);
    the smoke test is still to do. Credentials stay out of this repository.
 
-Not decided yet: which translation, or both, is proved in Lean; whether Astra and Neon audit both
-translations or one. The cost of each choice is in `token_estimate_2026-11-27.md`.
+## 27 November 2026, second set
+
+4. **Proving: the Opus translation only.** The Sonnet translation is not proved. A proof shows that a
+   statement can be proved, not that it is faithful, so a second proof adds little.
+5. **Audit: Astra audits both translations.** This gives the Opus against Sonnet comparison.
+6. **Review: Neon reviews a small sample of Astra's findings only**, not all of them. In the audit on real
+   errors of the first study it accepted 173 of 174 findings. The sample size is still to be fixed.
+7. **Astra is not a prover.** The "second prover" role, already dropped in the first study, is removed.
+
+Order per milestone batch: Astra audits a translation once that translation's batch is done (Opus and
+Sonnet each, independently, so neither waits for the other). Neon then reviews the sample of Astra's
+findings, accepted findings are repaired, and the repaired Opus translation is proved, without HOL4 proofs.
+Cost (core, 21,860 theorems, `token_estimate_2026-11-27.md`): both translations and Opus proving about
+7.7 B tokens and $4,100 at API prices; Astra about 310 M tokens.

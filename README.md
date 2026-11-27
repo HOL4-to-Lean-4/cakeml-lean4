@@ -13,8 +13,9 @@ bottom-up in dependency order, and modules already done by an earlier milestone 
 4. Larger milestones towards the compiler's top-level correctness theorem.
 
 Workflow (decisions of 27 November 2026, `plan/DECISIONS.md`): Claude Sonnet 5.5 and Claude Opus 5.5
-each translate the whole development once (definitions, then statements); GPT-6.2 Astra validates and
-is a second prover; Gemini Neon reviews findings; HOL4 runs ground every disputed claim. The
+each translate the whole development once (definitions, then statements); GPT-6.2 Astra audits both
+translations; Gemini Neon reviews a sample of Astra's findings; HOL4 runs ground every disputed claim;
+Claude Opus 5.5 proves the repaired Opus translation. The
 migration runs on a local machine, except Astra, which runs through the cloud gateway. Aristotle is
 not used.
 

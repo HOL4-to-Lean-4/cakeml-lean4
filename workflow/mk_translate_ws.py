@@ -145,7 +145,7 @@ def stage1(a):
                      dict(MILESTONE=ms.replace("milestone", ""), NSCRIPTS=len(scripts), NTHEOREMS=nthm, NLOCAL=nloc, NDEFS=ndef))
         io.open(os.path.join(ws, "BRIEF.md"), "w", encoding="utf-8", newline="\n").write(brief)
         others = [os.path.join(wr, "translate_" + o) for o in MODELS if o != name]
-        deny = [a.cakeml, a.holdir, REPO, os.path.join(os.path.dirname(REPO), "candle-hol4-lean4-study")] + others + \
+        deny = [a.cakeml, a.holdir, REPO, os.path.dirname(REPO), "/mnt", os.path.expanduser("~/astra_ws"), os.path.expanduser("~/upstream")] + others + \
             [os.path.join(wr, d) for d in os.listdir(wr) if d.startswith("prove_")]
         json.dump(settings(deny), io.open(os.path.join(root, "settings.json"), "w", encoding="utf-8"), indent=1)
         json.dump({"name": name, "model": MODELS[name], "milestone": ms, "created": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")},

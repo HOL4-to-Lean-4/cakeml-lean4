@@ -65,3 +65,8 @@ Reviews: `candle-hol4-lean4-study/plan/v3/reuse_rule_astra_2026-11-27.md` and `r
     scope" and links a public known-issues register.
 13. **Milestone 1 scope: full scripts** (author). All 25 scripts of the `typeSound` closure are translated
     as upstream has them (1,208 theorems, 617 definitions; `manifest/milestone1/`), with no reduction.
+14. **Neon's sample** (author, "continue" to the proposal of 27 November): Neon reviews every finding on a
+    definition, datatype or inductive, plus 20% of the other findings, drawn evenly from the Sonnet and Opus
+    translations and across error classes (fixed seed). Settles open decision 6 above and plan v3.4, "Open", item 6.
+15. **Pilot before milestone 1** (author): `namespace` and `namespaceProps` (manifest/pilot) go through every
+    step once with both translators, to test the launch scripts, the ledger and the isolation.

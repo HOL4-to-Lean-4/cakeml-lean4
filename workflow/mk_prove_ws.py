@@ -154,7 +154,7 @@ def main():
     # 4. brief
     shutil.copy(os.path.join(HERE, "briefs", "prove.md"), os.path.join(ws, "BRIEF.md"))
     # 5. settings (outside the workspace), report (no removed text)
-    deny = [os.path.expanduser("~/work"), "/root/upstream", REPO, os.path.dirname(REPO) + "/candle-hol4-lean4-study", _WR]
+    deny = [os.path.expanduser("~/work"), "/root/upstream", REPO, os.path.dirname(REPO), "/mnt", os.path.expanduser("~/astra_ws"), _WR]
     # the workspace itself is below WORK_ROOT: deny every sibling instead of the root
     sib = [os.path.join(_WR, d) for d in (os.listdir(_WR) if os.path.isdir(_WR) else []) if os.path.join(_WR, d) != out]
     deny = [d for d in deny if d != _WR and d != os.path.expanduser("~/work")] + sib + [os.path.join(_WR, "translate_sonnet"), os.path.join(_WR, "translate_opus")]

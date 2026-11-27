@@ -31,3 +31,11 @@ Sonnet each, independently, so neither waits for the other). Neon then reviews t
 findings, accepted findings are repaired, and the repaired Opus translation is proved, without HOL4 proofs.
 Cost (core, 21,860 theorems, `token_estimate_2026-11-27.md`): both translations and Opus proving about
 7.7 B tokens and $4,100 at API prices; Astra about 310 M tokens.
+
+## 27 November 2026, third set (after Astra's readiness review of the migration)
+
+Astra's review: `candle-hol4-lean4-study/plan/v3/readiness_astra_migration_2026-11-27.md`.
+
+9. **Pin.** The migration pins the current upstream CakeML `master` on freeze day (author).
+10. **Who settles findings.** Findings that are disputed, or that Neon does not sample, are settled by a
+    HOL4 check script (the grounding step); the author decides ties (author).

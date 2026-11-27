@@ -13,9 +13,14 @@ Output, one TSV row per constant declared in a module under the root's namespace
 def stdAxioms : List Name := [``propext, ``Classical.choice, ``Quot.sound]
 
 /-- Number of leading binders whose type is a sort or a type former into a sort (HOL4 type variables become these). -/
+def isTypeFormer : Expr → Bool
+  | .sort _ => true
+  | .forallE _ a b _ => a.isSort && isTypeFormer b
+  | _ => false
+
 def countTypeBinders : Expr → Nat
   | .forallE _ d b _ =>
-      (if (d.getForallBody).isSort then 1 else 0) + countTypeBinders b
+      (if isTypeFormer d then 1 else 0) + countTypeBinders b
   | _ => 0
 
 def kindOf : ConstantInfo → String

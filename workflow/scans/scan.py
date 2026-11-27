@@ -104,6 +104,7 @@ def main():
     for l in r.stdout.split("\n"):
         if l.startswith("C\t"):
             _, mod, name, kind, so, rb, uns, nb, oax, cons = l.split("\t")
+            name = name.replace("«", "").replace("»", ""); cons = cons.replace("«", "").replace("»", "")
             C[name] = dict(mod=mod, kind=kind, sorry=so == "1", rb=rb == "1", uns=uns == "1", nb=int(nb), oax=[x for x in oax.split(",") if x], cons=set(x for x in cons.split(",") if x))
     for n, c in sorted(C.items()):
         loc = c["mod"]
@@ -123,12 +124,13 @@ def main():
     if os.path.exists(names):
         for r_ in csv.reader(io.open(names, encoding="utf-8"), delimiter="\t"):
             if len(r_) >= 3 and r_[0] != "hol4" and not r_[0].startswith("#"):
-                nm[r_[0]] = (r_[1], r_[2])
+                nm[r_[0]] = (r_[1].replace("«", "").replace("»", ""), r_[2])
     else:
         info.append(("NO-NAMES", names, 0, "NAMES.tsv missing: statement/type-variable comparison skipped"))
     if nm and os.path.exists(a.statements):
         recs = [json.loads(x) for x in io.open(a.statements, encoding="utf-8")]
         thys = {r_["thy"] for r_ in recs}
+        constkeys = {r_["thy"] + "$" + r_["name"] for r_ in recs if r_["kind"] == "constant"}
         for r_ in recs:
             key = r_["thy"] + "$" + r_["name"]
             if r_["kind"] == "theorem" and r_.get("origin") == "script":
@@ -165,7 +167,8 @@ def main():
                 for cn in miss:
                     info.append(("UNMAPPED-CONST", r_["thy"], 0, f"{key} uses {cn}"))
                 tyc = {x for x in c["cons"] if C.get(x, {}).get("kind") in ("def", "inductive", "ctor", "opaque", "axiom")}
-                lacking, extra = sorted(want - c["cons"]), sorted(tyc - want)
+                mapped = {nm[x][0] for x in constkeys if x in nm}
+                lacking, extra = sorted(want - c["cons"]), sorted(x for x in (tyc & mapped) - want if ".match_" not in x)
                 if lacking or extra:
                     info.append(("STMT-CONSTS", c["mod"], 0, f"{key} -> {ln}: missing in Lean {lacking[:6]}; extra in Lean {extra[:6]}"))
     allrows = [("BLOCKING",) + b for b in blocking] + [("info",) + i for i in info]

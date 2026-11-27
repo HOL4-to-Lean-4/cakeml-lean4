@@ -16,7 +16,7 @@ Workflow (decisions of 27 November 2026, `plan/DECISIONS.md`): Claude Sonnet 5.5
 each translate the whole development once (definitions, then statements); GPT-6.2 Astra audits both
 translations; Gemini Neon reviews a sample of Astra's findings; HOL4 runs ground every disputed claim;
 Claude Opus 5.5 proves the repaired Opus translation. The
-migration runs on a local machine, except Astra, which runs through the cloud gateway. Aristotle is
+migration runs in Linux cloud sessions; Astra runs through the SSS gateway. Aristotle is
 not used.
 
 ## Layout

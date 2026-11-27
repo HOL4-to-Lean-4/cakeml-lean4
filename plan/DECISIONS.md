@@ -39,3 +39,10 @@ Astra's review: `candle-hol4-lean4-study/plan/v3/readiness_astra_migration_2026-
 9. **Pin.** The migration pins the current upstream CakeML `master` on freeze day (author).
 10. **Who settles findings.** Findings that are disputed, or that Neon does not sample, are settled by a
     HOL4 check script (the grounding step); the author decides ties (author).
+11. **What blocks reuse of a module** by later milestones (author). Until resolved, these block:
+    (a) any open finding on a definition or datatype; (b) a preservation error (V-P) on a theorem that a
+    later milestone imports; (c) structural scan failures (`sorry` outside the targets, new `axiom`,
+    `native_decide`, `decreasing_by sorry`, `partial` or `opaque` without a HOL4 counterpart).
+    Recorded as known issues, not blocking: V-C errors on statements no later module uses, tier-2 choice
+    cases and `unsure` items on such statements, naming and style. An item moves to the blocking list
+    once a later milestone imports it.

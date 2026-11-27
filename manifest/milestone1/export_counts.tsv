@@ -1,0 +1,27 @@
+theory	tsv_theorems	tsv_definitions	script_theorems	script_local	script_definition_blocks	export_theorems_script	export_definitions_script	export_generated	constants	types	unexplained_missing
+misc	304	50	295	8	50	306	38	37	58	1	-
+namespace	0	22	0	0	22	4	16	70	38	2	-
+mllist	43	25	37	6	25	40	22	3	25	0	-
+mlstring	119	56	98	20	56	105	47	50	69	2	-
+tokens	0	2	0	0	2	0	0	23	78	2	-
+ast	0	24	0	0	24	3	3	271	231	18	-
+ffi	0	13	0	0	13	0	3	178	79	10	-
+fpSem	0	11	0	0	11	0	7	83	36	4	-
+lexer_fun	14	26	10	4	26	20	15	26	38	1	-
+tokenUtils	3	22	3	0	22	25	0	44	22	0	-
+namespaceProps	122	3	119	1	3	120	2	1	3	0	-
+gram	2	10	3	0	10	4	9	23	90	1	-
+semanticPrimitives	6	128	5	1	124	37	78	371	266	14	-
+evaluate	12	7	11	1	7	11	6	0	9	0	-
+typeSystem	4	69	4	0	69	20	47	82	95	3	-
+primTypes	0	5	0	0	5	0	5	0	5	0	-
+typeSoundInvariants	16	24	16	0	21	17	18	18	28	1	-
+cmlPtreeConversion	11	66	8	3	66	31	41	79	99	2	-
+semantics	0	9	0	0	9	0	7	47	29	2	-
+semanticPrimitivesProps	152	26	148	4	23	158	13	13	26	0	-
+typeSysProps	168	5	104	14	4	105	3	1	4	0	-
+weakening	62	7	19	21	5	19	5	0	5	0	-
+primSemEnv	2	0	2	0	0	2	0	0	0	0	-
+evaluateProps	105	6	97	7	6	98	5	2	6	0	-
+typeSound	63	1	33	29	1	33	1	0	1	0	-
+TOTAL	1208	617	1012	119	604	1158	391	1422	1340	63	

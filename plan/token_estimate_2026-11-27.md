@@ -8,7 +8,7 @@ Tokens are input + output + cache read + cache write, as the CLIs report them. M
 
 Scaling is per HOL4 theorem (`Theorem` or `Triviality`). One migration pass per theorem is: Opus translates, Opus proves (without HOL4 proofs), Astra audits, Neon reviews. Baselines and ablations are not repeated.
 
-| Milestone | Theorems | Opus translate | Opus prove | Sonnet translate (option) |
+| Milestone | Theorems | Opus translate | Opus prove | Sonnet translate |
 |---|---|---|---|---|
 | Candle | 278 | 36.6 M ($18.7) | 10.6 M ($10.9) | 22.2 M ($7.2) |
 | Type soundness | 267 | 22.4 M ($25.4) | 34.0 M ($22.0) | 64.1 M ($17.5) |
@@ -53,3 +53,20 @@ On the subscription: the type-soundness proving run ($22 API-equivalent, 34 M to
 - One run per cell; no variance.
 - Repair rounds, re-audits after fixes and failed proving attempts are not in the per-theorem rate, so the real total is likely higher.
 - Astra and Neon counts include each CLI's fixed overhead per unit (suspected to be about 95 k input tokens per Codex call); fewer, larger units would lower them.
+
+## With two translations (decision of 27 November)
+
+Sonnet and Opus each translate the whole development once (`DECISIONS.md`). Translation alone:
+
+| | Per theorem | Core (21,860) | All (29,207) |
+|---|---|---|---|
+| Opus 5.5 translation | 108 k ($0.08) | 2.4 B, about $1,800 | 3.2 B, about $2,400 |
+| Sonnet 5.5 translation | 160 k ($0.05) | 3.5 B, about $1,000 | 4.7 B, about $1,300 |
+| Both translations | 268 k ($0.13) | 5.9 B, about $2,800 | 7.8 B, about $3,700 |
+| Opus proving, per translation proved | 83 k ($0.06) | 1.8 B, about $1,300 | 2.4 B, about $1,800 |
+| Astra audit of both translations | 14 k | 310 M | 410 M |
+| Neon review of both translations | 66 k | 1.4 B | 1.9 B |
+
+So the core migration with both translations and one of them proved is about 7.7 B tokens and $4,100
+of Claude use at API prices; with both proved, about 9.5 B and $5,400. Astra and Neon run on
+subscriptions. Aristotle is dropped and adds nothing. The limits above still apply.

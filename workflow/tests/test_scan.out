@@ -1,0 +1,33 @@
+=== clean translation (translate phase: sorry theorem allowed)
+info	TYVARS	CakeML.Misc.Misc	0	mini$two_tv -> Mini.good_id: HOL4 2 type variable(s), Lean 1 type binder(s)
+info	STMT-CONSTS	CakeML.Misc.Misc	0	mini$two_tv -> Mini.good_id: missing in Lean ['Mini.other']; extra in Lean []
+info	MISSING-THM	mini	0	mini$absent -> Mini.absent
+SCAN: 2 constants in CakeML.*, 1 theorems, 1 with sorry; blocking 0; reported {'TYVARS': 1, 'STMT-CONSTS': 1, 'MISSING-THM': 1}
+SCAN OK
+PASS  clean translation: exit 0
+PASS  type-variable and missing-theorem mismatches reported
+PASS  phase proved: sorry theorem is blocking (exit 1)
+=== translation with every violation
+BLOCKING	axiom	CakeML/Misc/Misc.lean	4	axiom
+BLOCKING	native_decide	CakeML/Misc/Misc.lean	9	native_decide
+BLOCKING	partial/opaque/unsafe	CakeML/Misc/Misc.lean	4	partial def
+BLOCKING	partial/opaque/unsafe	CakeML/Misc/Misc.lean	5	opaque
+BLOCKING	decreasing_by-sorry	CakeML/Misc/Misc.lean	8	decreasing_by ... sorry
+BLOCKING	axiom	CakeML.Misc.Misc	0	Mini.ax
+BLOCKING	sorry-in-def	CakeML.Misc.Misc	0	Mini.bad1
+BLOCKING	sorry-in-def	CakeML.Misc.Misc	0	Mini.f
+BLOCKING	partial/opaque/unsafe	CakeML.Misc.Misc	0	Mini.loop (opaque)
+BLOCKING	native_decide	CakeML.Misc.Misc	0	Mini.nd depends on Lean.ofReduceBool
+BLOCKING	partial/opaque/unsafe	CakeML.Misc.Misc	0	Mini.op (opaque)
+info	NO-NAMES	$T/v/NAMES.tsv	0	NAMES.tsv missing: statement/type-variable comparison skipped
+SCAN: 8 constants in CakeML.*, 2 theorems, 1 with sorry; blocking {'axiom': 2, 'native_decide': 2, 'partial/opaque/unsafe': 4, 'decreasing_by-sorry': 1, 'sorry-in-def': 2}; reported {'NO-NAMES': 1}
+SCAN FAILED
+PASS  violations: exit 1
+PASS  found sorry-in-def
+PASS  found axiom
+PASS  found native_decide
+PASS  found decreasing_by-sorry
+PASS  found partial/opaque/unsafe
+=== changed lakefile (new dependency)
+PASS  frozen-file violation
+ALL SCAN TESTS PASSED

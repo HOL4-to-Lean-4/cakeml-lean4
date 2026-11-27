@@ -46,3 +46,22 @@ Astra's review: `candle-hol4-lean4-study/plan/v3/readiness_astra_migration_2026-
     Recorded as known issues, not blocking: V-C errors on statements no later module uses, tier-2 choice
     cases and `unsure` items on such statements, naming and style. An item moves to the blocking list
     once a later milestone imports it.
+
+## 27 November 2026, fourth set (after Astra's and Neon's review of item 11)
+
+Reviews: `candle-hol4-lean4-study/plan/v3/reuse_rule_astra_2026-11-27.md` and `reuse_rule_neon_2026-11-27.md`.
+
+12. **Item 11 is replaced by a tighter rule** (author). Until resolved, these block reuse and release of a
+    module: (a) any confirmed V-P or V-C error on any theorem or definition in the manifest; (b) any open
+    finding on a definition, datatype or inductive; (c) failures of the scripts: statement and type mismatches
+    against the HOL4 export, vacuous statements, definitions without bodies, `sorry` outside the targets (and
+    any `sorry` after proving), new or unapproved transitive axioms, `native_decide`, `decreasing_by sorry`,
+    `partial` or `opaque` without a HOL4 counterpart. Known issues, not blocking: tier-2 choice cases and
+    `unsure` items on statements no later module imports, and naming and style. A known issue blocks once a
+    later module imports it. At most three repair rounds; blockers left at the cap stop the release and are
+    never demoted. Every repair or dismissal needs a checked Lean or HOL4 witness or the author's tie-break.
+    Every audit finding is logged before repair under the full Phase 1 contract, per translation; the
+    findings left after repair go in a second table. The README claims "no known violations in the audited
+    scope" and links a public known-issues register.
+13. **Milestone 1 scope: full scripts** (author). All 25 scripts of the `typeSound` closure are translated
+    as upstream has them (1,208 theorems, 617 definitions; `manifest/milestone1/`), with no reduction.

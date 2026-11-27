@@ -1,0 +1,40 @@
+{
+ "requested_model": "gpt-6.2-astra",
+ "reported_model": "gpt-6.2-astra",
+ "probe": {
+  "requested_model": "gpt-6.2-astra",
+  "reported_model": "gpt-6.2-astra",
+  "response_id": "resp_0d3fa21d21c2d909016b096cd1979087d29952b3c7edf0f050",
+  "status": "completed",
+  "usage": {
+   "input_tokens": 16192,
+   "input_tokens_details": {
+    "cached_tokens": 14080,
+    "cache_write_tokens": 0,
+    "cache_write_tokens_details": {
+     "ttl_30m_tokens": 0,
+     "ttl_12h_tokens": 0
+    }
+   },
+   "output_tokens": 5,
+   "output_tokens_details": {
+    "reasoning_tokens": 0
+   },
+   "total_tokens": 16197
+  },
+  "seconds": 3.7,
+  "gateway": "api.ssstoken.net",
+  "utc": "2026-11-27T11:43:15Z",
+  "answer": "OK"
+ },
+ "via": "codex exec + SSS gateway",
+ "usage": {
+  "input_tokens": 232514,
+  "cached_input_tokens": 181632,
+  "cache_write_input_tokens": 0,
+  "output_tokens": 1319,
+  "reasoning_output_tokens": 199
+ },
+ "seconds": 58,
+ "rc": 0
+}

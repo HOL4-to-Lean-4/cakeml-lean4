@@ -1,0 +1,8 @@
+level	check	where	line	detail
+info	MISSING-THM	namespace	0	namespace$nsMap_def -> namespace.nsMap.eq_1
+info	MISSING-THM	namespace	0	namespace$nsLookupMod_def -> namespace.nsLookupMod.eq_def
+info	MISSING-THM	namespace	0	namespace$nsLookup_def -> namespace.nsLookup.eq_def
+info	MISSING-THM	namespace	0	namespace$nsAppend_def -> namespace.nsAppend.eq_1
+info	MISSING-CONST	namespace	0	namespace$namespace_CONS -> -
+info	MISSING-CONST	namespace	0	namespace$id_CONS -> -
+info	STMT-CONSTS	CakeML.Semantics.Proofs.NamespaceProps	0	namespaceProps$nsLookup_nsLift -> namespaceProps.nsLookup_nsLift: missing in Lean ['namespace.id_CASE']; extra in Lean []

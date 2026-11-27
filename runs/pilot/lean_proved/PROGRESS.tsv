@@ -1,0 +1,121 @@
+time	theorem	status	uses_sorry	note
+2026-11-27T12:09:35Z	namespaceProps.mk_id_11	proved	no	induction on module path
+2026-11-27T12:09:35Z	namespaceProps.id_to_mods_mk_id	proved	no	induction
+2026-11-27T12:09:35Z	namespaceProps.id_to_namemods_mk_id	proved	no	induction
+2026-11-27T12:09:35Z	namespaceProps.mk_id_surj	proved	no	induction on id
+2026-11-27T12:09:35Z	namespaceProps.mk_id_thm	proved	no	induction on id
+2026-11-27T12:09:35Z	namespaceProps.nsAll_mono	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_mono	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_mono2	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_mono	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsOpen_nil	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsOpen_cons	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsOpen_eq_some	proved	no	via Aux.nsOpen_eq_some_iff
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_append	proved	no	induction on path
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_after_nsLookupMod	proved	no	induction on path
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_after_nsLookupMod	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_after_nsLookupMod	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_after_nsOpen	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_after_nsOpen	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_after_nsOpen	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsOpen_some_from_same_mod_domain	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_after_nsOpen	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_flip	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_before_nsOpen	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.alist_to_ns_nil	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsMap_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBind_nsEmpty	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_Bind_v_some	proved	no
+2026-11-27T12:09:35Z	namespaceProps.alist_to_ns_cons	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_assoc	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsMap_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBind_11	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_nsSing	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.alist_to_ns_11	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_to_nsLookupMod	proved	no	induction on id
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_alist_to_ns_some	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_alist_to_ns_none	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsLift_append	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsAppend_none	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsAppend_some	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAppend_to_nsBindList	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsAppend_none	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsAppend_some	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsAppend_alist	proved	no
+2026-11-27T12:09:35Z	namespaceProps.eALL_T	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsAll	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsAppend	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsOptBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsAppend_left	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_conj	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_refl	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_nsAppend2	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_nsAppend_lift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.alist_rel_restr_thm	proved	no	induction on keys
+2026-11-27T12:09:35Z	namespaceProps.alistSub_cong	proved	no	uses existing Aux.alist_rel_restr_congr
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_FOLDR_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_FOLDR_nsLift_some	proved	no	via Aux.lookup_foldr_lift
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_FOLDR_nsLift_none	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_conj	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsLookup1	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsLookup2	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsLookup_none	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsBind	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsBindList	proved	no	induction on Forall2
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsAppend	proved	no	via Aux.nsSub_append_of
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll2_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsMap_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsMap_compose	proved	no	Aux.ns_induction (well-founded on sizeOf)
+2026-11-27T12:09:35Z	namespaceProps.nsMap_I	proved	no	Aux.ns_induction
+2026-11-27T12:09:35Z	namespaceProps.nsMap_nsAppend	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookupMod_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsOpen_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsAll_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLift_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsSub_nsMap	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_nsDom	proved	no	Iff.rfl
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_alist_to_ns	proved	no
+2026-11-27T12:09:35Z	namespaceProps.lemma	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsAppend_equal	proved	no	via Aux.mem_nsDom_nsAppend / mem_nsDomMod_nsAppend
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_nsLift	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDom_nsAppend_flat	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsDomMod_nsAppend_flat	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_clauses	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_append	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_short_lookup	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_long_lookup	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_global_bind_commute_lookup	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsBindList_LIST_REL_lookup	proved	no	induction on Forall2
+2026-11-27T12:09:35Z	namespaceProps.ALOOKUP_LIST_REL_OPTREL	proved	no	induction on Forall2
+2026-11-27T12:09:35Z	namespaceProps.namespace_lookup_self_rel	proved	no
+2026-11-27T12:09:35Z	namespaceProps.nsLookup_namespaceSET3	proved	no	induction on id

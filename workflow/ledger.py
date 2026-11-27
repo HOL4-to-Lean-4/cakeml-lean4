@@ -14,7 +14,7 @@ INPUT is one of
     {input_tokens, cached_input_tokens, output_tokens, reasoning_output_tokens}, seconds, utc). Codex counts cached
     tokens inside input_tokens: the uncached part is written.
 Start/end default to --start/--end, else the file's mtime minus the duration. A row is skipped if the ledger already has
-the same (workflow, run), so re-running is safe. Columns not known from the input are left empty; usd_billed is empty
+the same (arm, phase, workflow, run), so re-running is safe. Columns not known from the input are left empty; usd_billed is empty
 unless --usd-billed (subscription calls are not billed per token)."""
 import argparse, csv, datetime, io, json, os, sys
 
@@ -105,8 +105,8 @@ def main():
     a = ap.parse_args()
     rows = list(csv.reader(io.open(a.ledger, encoding="utf-8", newline="")))
     H = rows[0]
-    wi, ri = H.index("workflow"), H.index("run")
-    have = {(r[wi], r[ri]) for r in rows[1:]}
+    ai, phi, wi, ri = H.index("arm"), H.index("phase"), H.index("workflow"), H.index("run")
+    have = {(r[ai], r[phi], r[wi], r[ri]) for r in rows[1:] if len(r) > ri}
     new = []
     for p in a.inputs:
         objs = load_json_any(p)
@@ -117,7 +117,7 @@ def main():
         end = a.end or d.get("utc") or iso(mt)
         start = a.start or iso(mt - d["seconds"])
         wf = a.workflow if len(a.inputs) == 1 else f"{a.workflow}-{os.path.splitext(os.path.basename(p))[0]}"
-        if (wf, a.run) in have:
+        if (a.arm, a.phase, wf, a.run) in have:
             print("skip (already in ledger):", wf, a.run)
             continue
         rec = {"arm": a.arm, "phase": a.phase, "round": a.round, "workflow": wf, "run": a.run, "tool": a.tool or d["tool"], "model_id": d["model_id"],

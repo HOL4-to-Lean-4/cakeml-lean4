@@ -1,1 +1,10 @@
 arm,phase,round,workflow,run,tool,model_id,start_utc,end_utc,input_tokens,output_tokens,cache_read_tokens,cache_write_tokens,reasoning_tokens,usd_billed,usd_api_equivalent,human_minutes,machine,notes
+sonnet,pilot,,translate_stage1,1,claude-cli,claude-sonnet-5-5,2026-11-27T11:12:53Z,2026-11-27T11:28:12Z,137,131942,11422411,246469,,,3.4478,0,cloud,session=378aa1cd-f2fd-47c9-a7ea-e6cfc622cf6d;turns=102;subtype=success
+sonnet,pilot,,translate_stage2,1,claude-cli,claude-sonnet-5-5,2026-11-27T11:31:25Z,2026-11-27T11:39:54Z,49,90145,3504202,200718,,,2.0548,0,cloud,session=8a065600-1cab-4531-ab28-92146c2867be;turns=40;subtype=success
+astra_audit_sonnet,pilot,,audit,CakeML.Semantics.Namespace,codex-cli,gpt-6.2-astra,2026-11-27T11:42:18Z,2026-11-27T11:43:14Z,51174,837,117376,0,83,,,0,cloud,requested=gpt-6.2-astra;reported=gpt-6.2-astra
+astra_audit_sonnet,pilot,,audit,CakeML.Semantics.Proofs.NamespaceProps,codex-cli,gpt-6.2-astra,2026-11-27T11:43:18Z,2026-11-27T11:44:07Z,54250,1330,189056,0,276,,,0,cloud,requested=gpt-6.2-astra;reported=gpt-6.2-astra
+opus,pilot,,prove,1,claude-cli,claude-opus-5-5,2026-11-27T11:45:14Z,2026-11-27T12:10:36Z,93,180400,8711728,270357,,,7.5136,0,cloud,session=1c32e0e2-78b4-40fe-a0eb-8dcee94f89b5;turns=76;subtype=success
+opus,pilot,,translate_stage1,1,claude-cli,claude-opus-5-5,2026-11-27T11:12:53Z,2026-11-27T11:30:50Z,127,105891,8602038,203348,,,5.4655,0,cloud,session=6340e505-7e56-448c-af5d-56dd024e0df1;turns=106;subtype=success
+opus,pilot,,translate_stage2,1,claude-cli,claude-opus-5-5,2026-11-27T11:31:25Z,2026-11-27T11:39:29Z,42,56414,2374596,165204,,,2.925,0,cloud,session=bb6a86df-fa19-4b94-be56-0a388a72baf8;turns=31;subtype=success
+astra_audit_opus,pilot,,audit,CakeML.Semantics.Namespace,codex-cli,gpt-6.2-astra,2026-11-27T11:42:20Z,2026-11-27T11:43:11Z,34359,826,124544,0,66,,,0,cloud,requested=gpt-6.2-astra;reported=gpt-6.2-astra
+astra_audit_opus,pilot,,audit,CakeML.Semantics.Proofs.NamespaceProps,codex-cli,gpt-6.2-astra,2026-11-27T11:43:15Z,2026-11-27T11:44:13Z,50882,1319,181632,0,199,,,0,cloud,requested=gpt-6.2-astra;reported=gpt-6.2-astra

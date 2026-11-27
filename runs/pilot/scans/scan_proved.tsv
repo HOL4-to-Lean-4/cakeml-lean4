@@ -1,0 +1,2 @@
+level	check	where	line	detail
+info	NO-NAMES	/root/work/cakeml_pilot/prove_opus/ws/lean/NAMES.tsv	0	NAMES.tsv missing: statement/type-variable comparison skipped

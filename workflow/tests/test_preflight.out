@@ -1,0 +1,31 @@
+--- real proof text used for planting (first 4 lines):
+Proof
+  Induct_on `l1`
+  >> rw [FLAT]
+  >> rw [FLAT]
+=== 1. clean workspace
+PASS  (0) mk_prove_ws on a clean translation, preflight passes
+PASS  (0) preflight on the clean workspace (re-run)
+=== 2. plant proof text in a COPY of the clean workspace; each must FAIL
+PASS  (1) real HOL4 Proof..QED text in a Lean comment
+PASS  (1) synthetic '>- simp[..]' tactic lines in a Lean comment
+PASS  (1) tactic line in a Lean -- comment
+PASS  (1) real proof text in a stray Markdown file (also an unexpected file)
+PASS  (1) real proof text in lean/CONVENTIONS.md
+PASS  (1) Proof ... QED block in .md
+PASS  (1) re-flowed proof text in a comment (single line)
+PASS  (1) proof text hidden in a Lean string literal (code)
+PASS  (1) a HOL4 script copied into the workspace
+PASS  (1) hol4/ directory present
+PASS  (1) symlink to the HOL4 sources
+PASS  (2) unreadable HOL4 scripts: refuses to pass unchecked
+=== 3. translation with HOL4 proof text in its comments: mk_prove_ws strips it, then preflight passes
+PASS  (0) mk_prove_ws strips planted proof text, preflight passes
+workspace $T/p2/ws: 30 Lean/Markdown files, 14 HOL4-proof lines removed (strip_report.tsv)
+PREFLIGHT OK: 324 text files checked against 532 HOL4 scripts (26242 proof regions); 0 finding(s)
+removed lines per file:
+      7 CONVENTIONS.md
+      7 CakeML/Semantics/Proofs/TypeSound.lean
+PASS  (0) stripped workspace passes standalone preflight
+PASS  hol4/ and PROGRESS.tsv were not copied
+ALL PREFLIGHT TESTS PASSED

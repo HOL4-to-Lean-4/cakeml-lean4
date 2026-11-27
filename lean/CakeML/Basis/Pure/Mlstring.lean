@@ -1,0 +1,1 @@
+-- Translation of CakeML `basis/pure/mlstringScript.sml` (milestone1). Stub: the translator fills this module.

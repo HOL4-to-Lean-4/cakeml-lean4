@@ -1,0 +1,1 @@
+-- Translation of CakeML `semantics/proofs/typeSysPropsScript.sml` (milestone1). Stub: the translator fills this module.

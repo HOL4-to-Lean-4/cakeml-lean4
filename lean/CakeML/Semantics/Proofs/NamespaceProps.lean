@@ -1,0 +1,1 @@
+-- Translation of CakeML `semantics/proofs/namespacePropsScript.sml` (milestone1). Stub: the translator fills this module.

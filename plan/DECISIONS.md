@@ -23,6 +23,9 @@ The author's words: "whole migration: translate once with Sonnet and once with O
    errors of the first study it accepted 173 of 174 findings. The sample size is still to be fixed.
 7. **Astra is not a prover.** The "second prover" role, already dropped in the first study, is removed.
 
+8. **Timing: Astra and Neon come in after each milestone**, not once at the end of the migration
+   (author: "we do it").
+
 Order per milestone batch: Astra audits a translation once that translation's batch is done (Opus and
 Sonnet each, independently, so neither waits for the other). Neon then reviews the sample of Astra's
 findings, accepted findings are repaired, and the repaired Opus translation is proved, without HOL4 proofs.

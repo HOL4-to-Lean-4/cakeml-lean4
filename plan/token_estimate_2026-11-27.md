@@ -14,7 +14,7 @@ Scaling is per HOL4 theorem (`Theorem` or `Triviality`). One migration pass per 
 | Type soundness | 267 | 22.4 M ($25.4) | 34.0 M ($22.0) | 64.1 M ($17.5) |
 | Per theorem (mean of the two) | | 108 k ($0.08) | 83 k ($0.06) | 160 k ($0.05) |
 
-Astra audit on real errors: 13.8 M tokens for 63 units covering 7 translations (4 × 278 + 3 × 267 = 1,913 theorems), so 7 k per theorem audited. Neon: 52.8 M for 53 of the 63 units, so about 33 k per theorem.
+Astra audit on real errors: 13.8 M tokens for 63 modules sampled from 8 translations, so about 219 k per audited module. (Corrected 27 November after Astra's review: the first version said 7 translations and divided by 1,913 theorems of whole translations, although only the 63 sampled modules were audited; the per-theorem audit rate below is therefore too low and is to be replaced by the per-module rate measured in milestone 1.) Neon: 52.8 M for 53 of the 63 units, so about 33 k per theorem.
 
 Everything in the ledger so far (all arms, baselines, audits): 602 M tokens; Claude rows $418.
 
@@ -31,7 +31,7 @@ Everything in the ledger so far (all arms, baselines, audits): 602 M tokens; Cla
 | translator | 26,577 | 1,121 |
 | characteristic | 13,766 | 507 |
 | cv_translator, misc, tutorial | 12,180 | 720 |
-| **All** | **917,972** | **29,207** |
+| **All** | **917,938** | **29,207** |
 | Without examples, pancake, tutorial | 662,168 | 21,860 |
 
 ## Estimate
@@ -45,7 +45,7 @@ Everything in the ledger so far (all arms, baselines, audits): 602 M tokens; Cla
 
 A line-based scaling gives the same size: Opus used about 5 k tokens per package line (Candle 47 M for 8,766 lines, type soundness 56 M for 11,258 lines), so 3.4 B (core) to 4.8 B (all).
 
-On the subscription: the type-soundness proving run ($22 API-equivalent, 34 M tokens) hit the usage limit once and was resumed. So one run of about $22 filled one to two usage windows; at that rate the core migration needs roughly 70 to 140 windows for Opus alone. The weekly limits of the plan are not published in tokens, so this count is rough.
+On the subscription: the type-soundness proving run ($22 API-equivalent, 34 M tokens) hit the usage limit once and was resumed. So one run of about $22 filled one to two usage windows; at that rate the core migration needs roughly 140 to 280 windows for Opus alone. The weekly limits of the plan are not published in tokens, so this count is rough.
 
 ## Limits of the estimate
 

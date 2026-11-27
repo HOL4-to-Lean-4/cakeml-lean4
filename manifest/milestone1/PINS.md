@@ -25,3 +25,11 @@ reduction of this closure (267 theorems, parser removed). HOL4 example theories 
 translated, need a Lean counterpart or a decision): `lprefix_lub`, context-free `grammar`, `peg`,
 `pegexec`, `location`, and `hoare-triple` `tailrec`, `set_sep`, `prog`, `address` (pulled in by the
 `cakeml-heap` of `misc`).
+
+## Counts after the export (27 November)
+
+The counts above were taken from the script text and include declarations inside `(* *)` comment blocks.
+Outside comments the 25 scripts declare 1,131 theorems (119 of them `[local]`) and 604 definition blocks;
+`statements.jsonl` holds the 1,158 exported script theorems and 391 script definitions plus generated
+theorems, constants and types (4,374 records; `export_counts.tsv`). Local theorems are not stored in the
+compiled theories: they are in `TARGETS.tsv` and are translated, but the statement scan cannot check them.

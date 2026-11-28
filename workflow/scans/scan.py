@@ -35,7 +35,8 @@ FROZEN = ["lakefile.lean", "lake-manifest.json", "lean-toolchain"]
 TXT = [
     ("axiom", re.compile(r"^[ \t]*(?:@\[[^\n]*\][ \t]*)?(?:private[ \t]+|protected[ \t]+|noncomputable[ \t]+)*axiom\b", re.M)),
     ("native_decide", re.compile(r"\bnative_decide\b|decide\s*\+kernel|\bofReduceBool\b")),
-    ("partial/opaque/unsafe", re.compile(r"(?:^|\s)partial\s+(?:def|instance|abbrev)\b|(?:^|\s)opaque\s|(?:^|\s)unsafe\s|\bimplemented_by\b|@\[\s*extern\b|@\[\s*export\b")),
+    # `opaque` itself is checked on the environment (below), where --allow-opaque applies
+    ("partial/unsafe/extern", re.compile(r"(?:^|\s)partial\s+(?:def|instance|abbrev)\b|(?:^|\s)unsafe\s|\bimplemented_by\b|@\[\s*extern\b|@\[\s*export\b")),
 ]
 
 

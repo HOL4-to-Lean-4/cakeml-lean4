@@ -39,7 +39,7 @@ def settings(deny_dirs):
     deny += ["Read(~/.claude/**)", "Read(~/.codex/**)", "Read(~/.config/**)", "Read(~/.ssh/**)", "WebFetch", "WebSearch", "Task", "Agent",
              "Bash(git:*)", "Bash(curl:*)", "Bash(wget:*)", "Bash(gh:*)", "Bash(ssh:*)"]
     allow = ["Read(./**)", "Edit(./**)", "Write(./**)", "Read(~/.elan/toolchains/leanprover--lean4---v4.28.0/**)", "Glob", "Grep",
-             "Bash(lake build:*)", "Bash(lake env lean:*)", "Bash(cd lean)", "Bash(date -u:*)", "Bash(ls:*)"]
+             "Bash(lake build:*)", "Bash(lake env lean:*)", "Bash(cd lean)", "Bash(cd lean && lake build:*)", "Bash(cd lean && lake env lean:*)", "Bash(cd lean; lake build:*)", "Bash(date -u:*)", "Bash(ls:*)"]
     return {"permissions": {"allow": allow, "deny": deny}}
 
 
